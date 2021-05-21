@@ -38,6 +38,12 @@ class OpportunitiesController < ApplicationController
     @opportunity.destroy
   end
 
+  def salesperson_opportunities
+      @opportunities = Salesperson.find(params[:id]).opportunities
+
+      render json: @opportunities
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_opportunity

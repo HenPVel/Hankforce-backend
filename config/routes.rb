@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "/salespersons/:id/opportunities", to: "opportunities#salesperson_opportunities"
+
+
   resources :activities
   resources :notes
   resources :opportunities
